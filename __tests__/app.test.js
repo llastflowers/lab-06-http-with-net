@@ -10,4 +10,24 @@ describe('createResponse', () => {
         expect(response.status).toEqual(200);
       });
   });
+
+  it('POSTs the requested text at the path /echo', () => {
+    return request(app)
+      .post('/echo')
+      .send('I AM A ROBOT')
+      .then(response => {
+        expect(response.text).toEqual('I AM A ROBOT');
+        expect(response.status).toEqual(200);
+      });
+  });
+
+  it('POSTs the requested text at the path /echo', () => {
+    return request(app)
+      .post('/echo')
+      .send('I AM A ROBOT')
+      .then(response => {
+        expect(response.text).toEqual('I AM A ROBOT');
+        expect(response.status).toEqual(200);
+      });
+  });
 });
